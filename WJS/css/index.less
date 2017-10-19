@@ -1,0 +1,399 @@
+// 1.引入变量表
+@import './setting.less';
+// 2.引入默认样式表
+@import './reset.less';
+// 3.引入兼容性样式表
+@import './normalize.less';
+
+body {
+  background-color: @white;
+}
+
+.wjs {
+  width: 100%;
+  margin:  0 auto;
+  overflow: hidden;
+}
+
+.wjs-content {
+  width: 100%;
+  margin:  0 auto;
+}
+
+// 1.顶部导航
+.topnav {
+  width: 100%;
+  border: 1px solid @topBorderColor;
+  height: @topHeight;
+  background-color: @white;
+
+  .container {
+    width: @smallWidth;
+    margin: 0 auto;
+    > div {
+      float: left;
+      line-height: @topHeight;
+      border-left: 1px solid @topBorderColor;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+
+
+      &:first-child {
+        border:none;
+      }
+    }
+
+    a {
+      color: #666;
+      
+    }
+
+
+  }
+
+  .qrcode {
+    width: @qrcodeWidth;
+  }
+
+  .service {
+    width: @serviceWidth;
+  }
+
+  .extra {
+    width: @extraWidth;
+  }
+
+  .join {
+    width: @joinWidth;
+    
+    .signup {
+      padding: 3px 5px;
+      background-color: rgb(248, 24, 24);
+      color:@white;
+      font-size: 14px;
+      border-radius: @topRadius;
+    }
+    .signin {
+      font-size: 14px;
+    }
+  }
+
+}
+
+// 导航
+.nav {
+  width: 100%;
+  height: @navHeight;
+  border-bottom: 1px solid @topBorderColor;
+  line-height:  @navHeight;
+  background-color: @white;
+
+  .container { 
+    width: @smallWidth;
+    margin:  0 auto;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    height:  @navHeight;
+    float: left;
+    position: relative;
+    &:first-child {
+      margin-right: 30px;
+      a {
+        padding: 0;
+      }
+    }
+    &:last-child {
+      float: right;
+      margin-right: @centerRight;
+    }
+
+    &:hover {
+      b {
+        opacity: 1;
+      }
+
+      a {
+        color: #333;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    color: #666;
+  }
+
+  b {
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: @navTextDecorationHeight + 1px ;
+    background-color: @navTextDecorationBg;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  img {
+    width: @navImgWidth;
+    vertical-align: middle;
+  }
+}
+
+
+// 轮播图
+.carousel {
+  width: 100%;
+  .swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+  }
+  .swipe-wrap {
+    overflow: hidden;
+   position: relative;
+  }
+  .swipe-wrap > li {
+    float:left;
+    width:100%;
+    position: relative;
+  }
+
+  .swipe-wrap > li > img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+}
+// 专长
+.expertise {
+  padding: @exPadding;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: @white;
+
+  dl {
+    float: left;
+    width: 33.333333%;
+    padding:  0 15px;
+  }
+
+  dt {
+    margin-bottom: @dtBottom;
+    font-size: 18px;
+  }
+
+  dd {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-family: @exFontFamily;
+    font-size: 12px;
+    margin-right: 5px;
+    color: @exColor;
+  }
+}
+
+
+// 通知
+.notify {
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid @topBorderColor;
+  background-color: @white;
+
+  ul {
+    width:@bigWidth;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  li {
+
+    margin-bottom: 5px;
+
+    .num {
+      color: @notifyColor;
+    }
+
+    a.num {
+      border-bottom: 1px dashed @notifyColor;
+    }
+
+    a.what {
+      color: @notifyqaColor;
+      margin: 0 10px;
+    }
+
+    &:first-child {
+      margin-top: 5px;
+    }
+    &:last-child {
+      position: absolute;
+      right: 0;
+      top:0;
+
+      
+      img {
+        height: @notifyImgHeight;
+        width: auto;
+      }
+    }
+  }
+}
+
+
+
+.loan {
+  width: 100%;
+  padding: 20px 0;
+  background-image: url("../images/box-style-bg.png");
+  border-top: 1px solid @topBorderColor;
+
+  .loan-wrap {
+    width: 1170px;
+    padding: 0 15px;
+    margin:  0 auto;
+  }
+
+  .tab-wrap {
+    width: 100%;
+    min-width: 570px;
+    height: @tabsHeight;
+  }
+
+  .tab {
+    width: 100%;
+    border-bottom: 1px solid @topBorderColor;
+    overflow: hidden;
+    padding-left: 15px;
+
+    li {
+      float:left;
+      padding: 6px 18px;
+      position: relative;
+
+      &.active b {
+        display: block;
+      }
+    }
+
+    a {
+      display: block;
+      color: #333;
+      padding-top: 10px;
+      padding-bottom: 8px;
+    }
+
+    b {
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: @tabTextDecorationColor;
+    }
+  }
+
+  .intro {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background-color: #fff;
+    font-size: 13px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border-radius: 3px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 54px;
+      border-left: 8px solid  transparent;
+      border-right: 8px solid  transparent;
+      border-bottom: 8px solid  #fff;
+    }
+  }
+
+}
+
+
+// 底部
+.footer {
+  width: 100%;
+  border-top: 1px solid @topBorderColor;
+
+  .aboutme {
+    width: 100%;
+    background-color: @white;
+    ul {
+      width: 100%;
+      text-align: center;
+      font-size: 0;
+    }
+    
+    li {
+      font-size: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      padding: 12px 0;
+      margin: 0 4px;
+
+      &:nth-last-child(-n+4){
+        margin: 0;
+      }
+    }
+    span {
+      margin: 0 2px;
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    background-color: @copyrightBg;
+    overflow: hidden;
+
+    >  p {
+      color: #fff;
+      margin:15px 0;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .company {
+      width: 100%;
+      height: 42px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      vertical-align: middle;
+    }
+  
+  }
+}
+
