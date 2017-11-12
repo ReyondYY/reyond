@@ -1,0 +1,26 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack -p",
+    "server": "./node_modules/.bin/webpack-dev-server --hot --open --contentBase src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "url-loader": "^0.6.2",
+    "vue": "^2.5.3",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.3",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
